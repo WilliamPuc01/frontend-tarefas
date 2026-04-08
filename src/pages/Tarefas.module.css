@@ -1,11 +1,11 @@
 .container {
   min-height: 100vh;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .card {
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1.5rem;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
@@ -34,6 +34,7 @@
   font-size: 13px;
   cursor: pointer;
   background: transparent;
+  white-space: nowrap;
 }
 
 .tarefa {
@@ -61,27 +62,39 @@
 
 .tarefaInfo {
   flex: 1;
+  min-width: 0;
 }
 
 .tarefaTitulo {
   font-size: 14px;
   font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .tarefaTituloConcluido {
   text-decoration: line-through;
   font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .tarefaDesc {
   font-size: 12px;
   margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .badge {
   font-size: 11px;
   padding: 2px 8px;
   border-radius: 99px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .btnConcluir {
@@ -92,6 +105,8 @@
   border-style: solid;
   background: transparent;
   cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .addForm {
@@ -100,27 +115,28 @@
   border-top-width: 1px;
   border-top-style: solid;
   display: flex;
+  flex-direction: column;
   gap: 8px;
 }
 
 .addForm input {
-  flex: 1;
-  padding: 8px 12px;
+  width: 100%;
+  padding: 10px 12px;
   border-radius: 8px;
   border-width: 1px;
   border-style: solid;
-  font-size: 13px;
+  font-size: 14px;
   outline: none;
 }
 
 .btnAdicionar {
-  padding: 8px 16px;
+  width: 100%;
+  padding: 10px 16px;
   border: none;
   border-radius: 8px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   cursor: pointer;
-  white-space: nowrap;
 }
 
 .toggleTheme {
@@ -134,4 +150,28 @@
   margin-bottom: 1rem;
   display: block;
   margin-left: auto;
+}
+
+@media (min-width: 480px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .addForm {
+    flex-direction: row;
+  }
+
+  .addForm input {
+    flex: 1;
+    width: auto;
+  }
+
+  .btnAdicionar {
+    width: auto;
+    white-space: nowrap;
+  }
 }
