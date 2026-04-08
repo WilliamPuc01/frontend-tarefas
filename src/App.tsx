@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Login from './pages/login'
-import Tarefas from './pages/tarefas'
+import Login from './pages/Login'    // ✅ L maiúsculo
+import Tarefas from './pages/Tarefas' // ✅ T maiúsculo
 
 function App() {
   return (
