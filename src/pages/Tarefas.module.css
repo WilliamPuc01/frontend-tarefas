@@ -161,6 +161,37 @@
     padding: 2rem;
   }
 
+ .addForm {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top-width: 1px;
+  border-top-style: solid;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.addForm input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 14px;
+  outline: none;
+}
+
+.btnAdicionar {
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media (min-width: 520px) {
   .addForm {
     flex-direction: row;
   }
@@ -174,4 +205,5 @@
     width: auto;
     white-space: nowrap;
   }
+}
 }
